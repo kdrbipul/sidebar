@@ -1,0 +1,91 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@500&family=Inspiration&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@100;400&display=swap');
+
+
+/* Basic structure star here */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    /* font-family: 'Alkatra', cursive;
+    font-family: 'Inspiration', cursive; */
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    height:100vh;
+    background:var(--body-color);
+}
+
+:root{
+    --body-color:#E4E9F7;
+    --sidebar-color:#FFF;
+    --primary-color:#695cFE;
+    --primary-color-light:#F6F5Ff;
+    --toggle-color:#DDD;
+    --text-color:#707070;
+
+
+    /* Transition part start here */
+
+    --tran-02:all 0.2s ease;
+    --tran-03:all 0.3s ease;
+    --tran-04:all 0.4s ease;
+    --tran-05:all 0.5s ease;
+
+    /* Transition part end here */
+}
+
+/* Basic structure end here */
+
+
+/* ========sidebar part start here======== */
+
+.sidebar{
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:250px;
+    background:var(--sidebar-color);
+    padding:10px 14px;
+}
+
+.sidebar .text{
+    font-size:16px;
+    font-weight:500;
+    color:var(--text-color);
+}
+.sidebar header .image-text{
+    display:flex;
+    align-items:center;
+}
+
+.sidebar .image-text img{
+    width:40px;
+    border-radius:6px;
+}
+
+/* =====resuable css======= */
+.sidebar .image{
+    min-width:60px;
+    display:flex;
+    align-items:center;
+}
+/* =====resuable css end======= */
+
+/* ========sidebar part end here======== */
+
+/* ========Header part start here======= */
+header .image-text .header-text{
+    display:flex;
+    flex-direction: column;
+}
+.header-text .name{
+    font-weight: 600;
+}
+.header-text .profession{
+    margin-top:-2px;
+}
+/* ========Header part end here======= */
