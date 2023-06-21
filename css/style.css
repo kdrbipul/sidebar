@@ -51,7 +51,6 @@ body{
     background:var(--sidebar-color);
     padding:10px 14px;
 }
-
 .sidebar .text{
     font-size:16px;
     font-weight:500;
@@ -66,6 +65,83 @@ body{
     width:40px;
     border-radius:6px;
 }
+.sidebar li{
+    height:50px;
+    /* background:red; */
+    margin-top:10px;
+    list-style:none;
+    display:flex;
+    align-items:center;
+}
+
+.sidebar li .icon{
+    font-size:20px;
+    min-width:60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.sidebar li .icon,
+.sidebar li .text{
+    color:var(--text-color);
+}
+
+.sidebar li a{
+    text-decoration:none;
+    height:100%;
+    display:flex;
+    align-items:center;
+    border-radius:6px;
+    transition:var(--tran-04);
+    width:100%;
+}
+.sidebar li a:hover{
+    background:var(--sidebar-color);
+}
+
+.sidebar header .toggle{
+    position:absolute;
+    top:50%;
+    right:-25px;
+    transform:translateY(-50%);
+    height:25px;
+    width:25px;
+    background:var(--primary-color);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    color:var(--sidebar-color);
+    font-size:22px;
+}
+.sidebar header{
+    position:relative;
+}
+
+
+.sidebar .search-box{
+    background:var(--primary-color-light);
+}
+.search-box input{
+    height:100%;
+    width:100%;
+    background:var(--primary-color-light);
+    outline:none;
+    border:none;
+    border-radius:6px;
+}
+
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text{
+    color:var(--primary-color);
+}
+.sidebar li .icon,
+.sidebar li .text{
+    transition:var(--tran-03);
+}
+
 
 /* =====resuable css======= */
 .sidebar .image{
@@ -89,3 +165,93 @@ header .image-text .header-text{
     margin-top:-2px;
 }
 /* ========Header part end here======= */
+
+
+/* =======sidebar menu bar part start here */
+
+.sidebar .menu-bar{
+    /* background:red; */
+    height:calc(100% - 50px);
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    height:calc(100% - 50px);
+}
+
+
+.menu-bar .mode{
+    background:var(--primary-color-light);
+}
+.menu-bar .mode i{
+    position:absolute;
+}
+.menu-bar .mode .moon-sun{
+    height:50px;
+    width:60px;
+    display:flex;
+    align-items:center;
+}
+.menu-bar .mode i .sun{
+    opacity:0;
+}
+
+.menu-bar .mode .toggle-switch{
+    height:100%;
+    min-width:60px;
+    /* background:red; */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.toggle-seitch .switch{
+    height:22px;
+    width:44px;
+    background:var(--toggle-color);
+    position:relative;
+    border-radius:25px;
+}
+.switch::before{
+    height:15px;
+    width:15px;
+    background:var(--sidebar-color);
+    content:'';
+    position:absolute;
+    border-radius:50%;
+    top:50%;
+    letter-spacing:normal;
+    left:5px;
+    transform:translate(-50%);
+    cursor:pointer;
+}
+
+.menu-bar .mode .toggle-switch{
+    cursor:pointer;
+}
+.menu-bar .mode .toggle-switch{
+    height:100%;
+    min-width:60px;
+    background:red;
+    display:flex;
+    align-items:center;
+    border-radius:25px;
+}
+.toggle-switch .switch{
+    height:22px;
+    width:44px;
+    background:var(--toggle-color);
+    position:relative;
+    border-radius:25px;
+}
+.switch::before{
+    height:15px;
+    width:15px;
+    background:var(--sidebar-color);
+    content:'';
+    position:absolute;
+    border-radius:50%;
+    top:50%;
+    left:5px;
+    transform:translate(-50%);
+    cursor:pointer;
+}
+/* =======sidebar menu bar part end here */
