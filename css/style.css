@@ -16,6 +16,7 @@ body{
     font-family: 'Roboto', sans-serif;
     height:100vh;
     background:var(--body-color);
+    transition:var(--tran-02);
 }
 
 :root{
@@ -203,7 +204,7 @@ header .image-text .header-text{
     align-items:center;
     justify-content:center;
 }
-.toggle-seitch .switch{
+.toggle-switch .switch{
     height:22px;
     width:44px;
     background:var(--toggle-color);
@@ -230,28 +231,41 @@ header .image-text .header-text{
 .menu-bar .mode .toggle-switch{
     height:100%;
     min-width:60px;
-    background:red;
+    /* background:red; */
     display:flex;
     align-items:center;
     border-radius:25px;
 }
 .toggle-switch .switch{
-    height:22px;
+    height:20px;
     width:44px;
     background:var(--toggle-color);
     position:relative;
     border-radius:25px;
 }
 .switch::before{
-    height:15px;
-    width:15px;
+    height:20px;
+    width:20px;
     background:var(--sidebar-color);
     content:'';
     position:absolute;
     border-radius:50%;
-    top:50%;
-    left:5px;
+    top:4%;
+    left:10px;
     transform:translate(-50%);
     cursor:pointer;
+    transition:var(--tran-03);
+}
+
+body.dark .switch::before{
+    left:12px;
+}
+body.dark{
+    --body-color:#E4E9F7;
+    --sidebar-color:#FFF;
+    --primary-color:#695cFE;
+    --primary-color-light:#F6F5Ff;
+    --toggle-color:#DDD;
+    --text-color:#707070;
 }
 /* =======sidebar menu bar part end here */
