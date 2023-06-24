@@ -16,7 +16,7 @@ body{
     font-family: 'Roboto', sans-serif;
     height:100vh;
     background:var(--body-color);
-    transition:var(--tran-02);
+    transition:var(--tran-05);
 }
 
 :root{
@@ -51,6 +51,23 @@ body{
     width:250px;
     background:var(--sidebar-color);
     padding:10px 14px;
+    transition:var(--tran-05);
+    z-index: 100;
+}
+.sidebar .text{
+    transition:var(--tran-03);
+    white-space:nowrap;
+    opacity:1;
+}
+.sidebar.close{
+    width:88px;
+}
+
+.sidebar.close header .toggle{
+    transform:translateY(-50%);
+}
+.sidebar.close .text{
+    opacity:0;
 }
 .sidebar .text{
     font-size:16px;
@@ -115,6 +132,8 @@ body{
     border-radius:50%;
     color:var(--sidebar-color);
     font-size:22px;
+    transform:translateY(-50%) rotate(180deg);
+    transition:var(--tran-03);
 }
 .sidebar header{
     position:relative;
@@ -123,6 +142,7 @@ body{
 
 .sidebar .search-box{
     background:var(--primary-color-light);
+    border-radius:6px;
 }
 .search-box input{
     height:100%;
@@ -182,6 +202,9 @@ header .image-text .header-text{
 
 .menu-bar .mode{
     background:var(--primary-color-light);
+    position:relative;
+    border-radius:6px;
+    background:var(--primary-color-light);
 }
 .menu-bar .mode i{
     position:absolute;
@@ -203,6 +226,9 @@ header .image-text .header-text{
     display:flex;
     align-items:center;
     justify-content:center;
+    position:absolute;
+    right:0px;
+    background:var(--primary-color-light);
 }
 .toggle-switch .switch{
     height:22px;
@@ -268,4 +294,46 @@ body.dark{
     --toggle-color:#FFF;
     --text-color:#ccc;
 }
+body.dark .sidebar header .toggle{
+    color:var(--text-color);
+}
+body.dark .sidebar li a:hover .icon,
+body.dark .sidebar li a:hover .text{
+    color:rgba(255, 99, 71, 0.562);
+    /* background:var(--primary-color); */
+}
+
+body.dark .menu-bar .mode i.sum{
+    opacity:1;
+}
+body.dark .menu-bar .mode i.moon{
+    opacity:0;
+}
+
+.menu-bar .mode i{
+    transition:var(--tran-03);
+}
+
+
+.home{
+    position:relative;
+    height:100vh;
+    width: calc(100% - 250px);
+    /* background:red; */
+    left:250px;
+    transition:var(--tran-03);
+}
+
+.sidebar.close ~ .home{
+    left:88px;
+    width:calc(100% - 88px);
+    transition:var(--tran-04);
+}
+.home .text{
+    font-size: 30px;
+    font-weight:500;
+    color:var(--text-color);
+    padding:8px 40px;
+}
+
 /* =======sidebar menu bar part end here */
